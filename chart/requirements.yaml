@@ -6,4 +6,10 @@ dependencies:
   - name: prometheus-operator
     version: 8.7.0
     repository: https://kubernetes-charts.storage.googleapis.com/
+    condition: prometheus.install
     alias: prometheus
+  - name: argo
+    version: 0.7.2
+    repository: https://argoproj.github.io/argo-helm
+    condition: argo.install
+    alias: argo

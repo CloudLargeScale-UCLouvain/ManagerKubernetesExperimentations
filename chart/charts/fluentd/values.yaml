@@ -5,11 +5,12 @@
 replicaCount: 1
 
 mongoHost: manager-mongo-manager
+database: private-recsys
 
 image:
-  repository: localhost:32000/fluentd-locust
-  tag: registry
-  pullPolicy: IfNotPresent
+  repository: grosinosky/fluentd
+  tag: 0.0.1
+  pullPolicy: Always
 
 imagePullSecrets: []
 nameOverride: ""

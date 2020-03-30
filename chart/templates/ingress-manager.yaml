@@ -22,3 +22,10 @@ spec:
         backend:
           serviceName: manager-jupyter
           servicePort: 8888
+  - host: argo.{{ .Values.hostAddress}}
+    http:
+      paths:
+      - path: /?(.*)
+        backend:
+          serviceName: manager-server
+          servicePort: 2746

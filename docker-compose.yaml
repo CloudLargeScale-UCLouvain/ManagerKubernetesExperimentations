@@ -1,0 +1,9 @@
+# build
+version: '3.7'
+services:
+  fluentd:
+    build: 
+      context: ./docker/fluentd-locust
+      dockerfile: Dockerfile
+      network: host
+    image: grosinosky/fluentd:0.0.1

@@ -19,7 +19,7 @@ data:
         type_name fluentd
 
         # mongodb host + port
-        connection_string mongodb://{{ .Values.mongoHost }}:27017/private-recsys
+        connection_string mongodb://{{ .Values.mongoHost }}:27017/{{ .Values.database }}
 
         # mongodb db + collection
         tag_mapped
