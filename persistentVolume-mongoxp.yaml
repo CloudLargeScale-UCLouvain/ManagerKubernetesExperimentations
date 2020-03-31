@@ -19,3 +19,15 @@ spec:
           operator: In
           values:
           - manager
+---          
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pvc-manager-jupyter
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 8Gi
+  storageClassName: storage-jupyter

@@ -20,4 +20,17 @@ spec:
         - key: tier
           operator: In
           values:
-          - manager
+          - manager       
+---
+# Define Kubernetes PVC
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pvc-manager-jupyter
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 8Gi
+  storageClassName: storage-jupyter
