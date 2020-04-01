@@ -81,7 +81,6 @@ mongo-express:
 mongo:
   persistence:
     enabled: true
-    existingClaim: pvc-manager-jupyter
   usePassword: false
   nodeSelector:
     tier: manager
