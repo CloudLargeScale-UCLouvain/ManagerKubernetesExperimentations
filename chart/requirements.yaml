@@ -1,6 +1,6 @@
 dependencies:
   - name: mongodb
-    version: 7.8.2
+    version: 3.0.4
     repository: https://kubernetes-charts.storage.googleapis.com/
     alias: mongo-manager
   - name: prometheus-operator
