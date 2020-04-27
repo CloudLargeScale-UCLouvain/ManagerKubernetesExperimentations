@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: grosinosky/harness-jupyter
+  repository: grosinosky/manager-jupyter
   tag: 0.0.1
   pullPolicy: IfNotPresent
 

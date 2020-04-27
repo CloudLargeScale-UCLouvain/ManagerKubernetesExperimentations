@@ -7,3 +7,9 @@ services:
       dockerfile: Dockerfile
       network: host
     image: grosinosky/fluentd:0.0.1
+  jupyter:
+    build: 
+      context: ./docker/jupyter
+      dockerfile: Dockerfile
+      network: host
+    image: grosinosky/manager-jupyter:0.0.1
