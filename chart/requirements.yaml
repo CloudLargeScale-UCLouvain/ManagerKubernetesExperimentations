@@ -9,7 +9,7 @@ dependencies:
     condition: prometheus.install
     alias: prometheus
   - name: argo
-    version: 0.7.2
+    version: 0.8.5
     repository: https://argoproj.github.io/argo-helm
     condition: argo.install
     alias: argo

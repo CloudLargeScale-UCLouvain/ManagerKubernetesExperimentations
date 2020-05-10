@@ -1,9 +1,12 @@
 dependencies:
 - name: mongodb
   repository: https://kubernetes-charts.storage.googleapis.com/
-  version: 7.8.2
+  version: 3.0.4
 - name: prometheus-operator
   repository: https://kubernetes-charts.storage.googleapis.com/
   version: 8.7.0
-digest: sha256:7f06195326ff500b1bfa402ab55f601c2c0b099e7b70a991a00177f2286d2ef0
-generated: "2020-03-28T19:56:10.219575408+01:00"
+- name: argo
+  repository: https://argoproj.github.io/argo-helm
+  version: 0.8.5
+digest: sha256:0fd86d26f95e60192c1a15479d58666bee9a76a573532f5fcae6f8bb63d84ed2
+generated: "2020-05-08T08:58:17.333080117Z"

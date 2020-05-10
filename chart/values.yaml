@@ -5,9 +5,21 @@
 replicaCount: 1
 
 hostAddress: 192-168-0-2.nip.io
-
 argo:
   install: true
+  useDefaultArtifactRepo: false
+  artifactRepository:
+    archiveLogs: true
+    s3:
+      accessKeySecret:
+        key: accesskey
+        name: manager-minio
+      secretKeySecret:
+        key: secretkey
+        name: manager-minio
+      bucket: argo-artifacts
+      endpoint: manager-minio.manager:9000
+      insecure: true    
   minio:
     install: true
     persistence:
