@@ -10,6 +10,7 @@ spec:
   - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   volumeMode: Filesystem
+  storageClassName: storage-mongo    
   local:
     path: /home/ubuntu/xp/volumes/mongo
   nodeAffinity:
@@ -20,4 +21,17 @@ spec:
           operator: In
           values:
           - manager
-
+---
+# Define Kubernetes PVC
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pvc-manager-mongoxp
+  namespace: manager
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 8Gi
+  storageClassName: storage-mongo               

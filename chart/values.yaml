@@ -90,10 +90,12 @@ jupyter:
 mongo-express:
   nodeSelector:
     tier: manager
-mongo:
+mongo-manager:
   persistence:
     enabled: true
-  usePassword: false
+    existingClaim: pvc-manager-mongoxp
+  auth:
+    enabled: false
   nodeSelector:
     tier: manager
 

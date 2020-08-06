@@ -8,7 +8,7 @@ mongo: manager-mongo-manager
 
 image:
   repository: mongo-express
-  tag: 0.49
+  tag: 0.54
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []

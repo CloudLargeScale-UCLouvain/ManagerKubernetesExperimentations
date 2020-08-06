@@ -2,6 +2,7 @@ sudo snap install kubectl --classic
 sudo snap install helm --classic
 helm repo add stable https://kubernetes-charts.storage.googleapis.com
 helm repo add argo https://argoproj.github.io/argo-helm
+helm repo add bitnami https://charts.bitnami.com/bitnami
 
 cd chart
 helm dep update

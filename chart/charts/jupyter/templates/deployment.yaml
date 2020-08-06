@@ -23,7 +23,7 @@ spec:
       initContainers:
       - name: wait-for-mongo
         image: groundnuty/k8s-wait-for:0.1
-        args: [ "pod", "-lapp=mongo-manager" ]
+        args: [ "pod", "-lapp.kubernetes.io/name=mongo-manager" ]
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
