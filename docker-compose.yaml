@@ -12,4 +12,4 @@ services:
       context: ./docker/jupyter
       dockerfile: Dockerfile
       network: host
-    image: grosinosky/manager-jupyter:0.0.1
+    image: grosinosky/manager-jupyter:0.0.2
