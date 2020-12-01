@@ -44,9 +44,30 @@ argo:
     #  hosts:
     #  - argo.192-168-0-2.nip.io
     #  path: /?(.*)
-
+loki:
+  install: false
+  loki:
+  nodeSelector: 
+    tier: prometheus
+  config:
+    limits_config:
+      ingestion_rate_mb: 16
+      ingestion_burst_size_mb: 32
 prometheus:
   install: true
+  grafana:
+    nodeSelector:
+      tier: manager
+    ## uncomment if Loki is added
+    #additionalDataSources:
+    #- name: Loki
+    #  type: loki
+    #  orgId: 1
+    #  url: http://manager-loki.manager:3100/
+    #  access: proxy
+    #  isDefault: false    
+    #  editable: false    
+    #  version: 1      
   prometheus:
 #    ingress:
 #      enabled: true
