@@ -5,6 +5,9 @@
 replicaCount: 1
 
 hostAddress: 192-168-0-2.nip.io
+minio:
+  persistence:
+    existingClaim: argo-minio
 argo:
   install: true
   useDefaultArtifactRepo: false
@@ -21,7 +24,7 @@ argo:
       endpoint: manager-minio.manager:9000
       insecure: true    
   minio:
-    install: true
+    install: false # broken the 21/01 (see https://github.com/argoproj/argo-helm/pull/495)
     persistence:
       existingClaim: argo-minio
 #    ingress:
@@ -112,6 +115,7 @@ mongo-express:
   nodeSelector:
     tier: manager
 mongo-manager:
+  usePassword: false
   persistence:
     enabled: true
     existingClaim: pvc-manager-mongoxp
