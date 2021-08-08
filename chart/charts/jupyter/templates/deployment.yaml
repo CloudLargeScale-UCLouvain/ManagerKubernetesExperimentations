@@ -20,10 +20,6 @@ spec:
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
     {{- end }}
-      initContainers:
-      - name: wait-for-mongo
-        image: groundnuty/k8s-wait-for:0.1
-        args: [ "pod", "-lapp=mongo-manager" ]
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"

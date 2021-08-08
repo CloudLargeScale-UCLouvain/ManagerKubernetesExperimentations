@@ -3,6 +3,7 @@ dependencies:
     version: 4.10.1
     repository: https://charts.bitnami.com/bitnami
     alias: mongo-manager
+    condition: mongo.install    
   - name: prometheus-operator
     version: 8.7.0
     repository: https://charts.helm.sh/stable
